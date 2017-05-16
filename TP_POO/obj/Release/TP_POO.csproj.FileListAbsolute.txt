@@ -1,0 +1,10 @@
+C:\Users\cedric\Source\Repos\TP_POO_Bouvier_Soual\TP_POO\bin\Release\TP_POO.dll
+C:\Users\cedric\Source\Repos\TP_POO_Bouvier_Soual\TP_POO\bin\Release\TP_POO.pdb
+C:\Users\cedric\Source\Repos\TP_POO_Bouvier_Soual\TP_POO\obj\Release\TP_POO.csprojResolveAssemblyReference.cache
+C:\Users\cedric\Source\Repos\TP_POO_Bouvier_Soual\TP_POO\obj\Release\TP_POO.dll
+C:\Users\cedric\Source\Repos\TP_POO_Bouvier_Soual\TP_POO\obj\Release\TP_POO.pdb
+C:\Users\csoual\Downloads\TP_POO_Bouvier_Soual\TP_POO\bin\Release\TP_POO.dll
+C:\Users\csoual\Downloads\TP_POO_Bouvier_Soual\TP_POO\bin\Release\TP_POO.pdb
+C:\Users\csoual\Downloads\TP_POO_Bouvier_Soual\TP_POO\obj\Release\TP_POO.csprojResolveAssemblyReference.cache
+C:\Users\csoual\Downloads\TP_POO_Bouvier_Soual\TP_POO\obj\Release\TP_POO.dll
+C:\Users\csoual\Downloads\TP_POO_Bouvier_Soual\TP_POO\obj\Release\TP_POO.pdb

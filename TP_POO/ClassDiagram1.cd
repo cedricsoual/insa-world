@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="TP_POO.Game">
+    <Position X="4.5" Y="0.75" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>MAABAAAhAhAgAAAAhIAAAgiAEMCEAAAAAAAAgAiAAAA=</HashCode>
+      <FileName>Game.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TP_POO.Player">
+    <Position X="2.25" Y="1.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAgAAAAAAAAAQAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TP_POO.Cerberus">
+    <Position X="2.25" Y="12.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Unit\Cerberus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TP_POO.Centaurs">
+    <Position X="5" Y="12.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Unit\Centaurs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TP_POO.Cyclops">
+    <Position X="7.75" Y="12.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Unit\Cyclops.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TP_POO.Plain">
+    <Position X="13.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Tile\Plain.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TP_POO.Desert">
+    <Position X="11.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Tile\Desert.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TP_POO.Volcano">
+    <Position X="15" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Tile\Volcano.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.398" />
+  </Class>
+  <Class Name="TP_POO.Swamp">
+    <Position X="9.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Tile\Swamp.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TP_POO.UnitFactory">
+    <Position X="2.25" Y="7.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Unit\UnitFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TP_POO.TileFlyweight">
+    <Position X="11.25" Y="5.25" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAEgAAAAAAAAEAAAABAAA=</HashCode>
+      <FileName>Tile\TileFlyweight.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TP_POO.DemoGame">
+    <Position X="8" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameStrategie\DemoGame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TP_POO.SmallGame">
+    <Position X="10.25" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameStrategie\SmallGame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TP_POO.StandardGame">
+    <Position X="12.5" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameStrategie\StandardGame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TP_POO.Map">
+    <Position X="2.25" Y="4.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAADAAAAAAAIAAAgIAAAEAAAAAIAAAQAAAIAAAAAAA=</HashCode>
+      <FileName>Map.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TP_POO.AttackCommand">
+    <Position X="11" Y="12.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAFAEAAAACAAAAAAAAkAAwAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Commands\AttackCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TP_POO.Replay">
+    <Position X="17.25" Y="9.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAQAAAACAAAACAAIAAA=</HashCode>
+      <FileName>Replay.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TP_POO.ReplayCommand">
+    <Position X="13.75" Y="10" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAEAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\ReplayCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TP_POO.MoveCommand">
+    <Position X="13.75" Y="12.25" Width="2" />
+    <InheritanceLine Type="TP_POO.ReplayCommand" FixedFromPoint="true">
+      <Path>
+        <Point X="14.625" Y="11.68" />
+        <Point X="14.625" Y="11.95" />
+        <Point X="14.75" Y="11.95" />
+        <Point X="14.75" Y="12.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAABEAAAAAAAAAAIAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\MoveCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TP_POO.GameManager">
+    <Position X="7.75" Y="4.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AQAAAQAAAAAAAAAAEAAAAAAAAAQAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>GameManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TP_POO.Unit">
+    <Position X="5" Y="6.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAABCAAAAIAgCEAggAAQAAAAAIAAABAAAAAABgAAAAA=</HashCode>
+      <FileName>Unit\Unit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TP_POO.EndTurnCommand">
+    <Position X="16" Y="12.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AABABAAAAAAAAAAACACAAAAAAAAAAACIAAAAAoAAAAA=</HashCode>
+      <FileName>Commands\EndTurnCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TP_POO.Position">
+    <Position X="0.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAYAA=</HashCode>
+      <FileName>Position.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TP_POO.GameStrategy">
+    <Position X="10.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAIACAAIAAAAAAAAAAA=</HashCode>
+      <FileName>GameStrategie\GameStrategy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TP_POO.ReplaySave">
+    <Position X="21" Y="10" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAIAAA=</HashCode>
+      <FileName>ReplaySave.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="TP_POO.Tile">
+    <Position X="13.75" Y="5.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Tile\Tile.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="TP_POO.UnitType">
+    <Position X="0.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAAgAA=</HashCode>
+      <FileName>Unit\UnitType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="TP_POO.TilesType">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAAAQAAgAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Tile\TilesType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="TP_POO.MapSize">
+    <Position X="0.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAgAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MapType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

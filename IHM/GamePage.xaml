@@ -1,0 +1,129 @@
+﻿<Page x:Class="IHM.GamePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+	Title="GamePage" DataContext="MainViewModel">
+    <Page.Resources>
+        <SolidColorBrush x:Key="TransparentBackground" Color="White" Opacity="0.5" />
+        <BooleanToVisibilityConverter x:Key="bool2visibility"/>
+    </Page.Resources>
+    <Page.InputBindings>
+        <KeyBinding Command="{Binding Move}" Gesture="ENTER" />
+        <KeyBinding Command="{Binding NextUnit}" Key="Z" />
+        <KeyBinding Command="{Binding Suggest}" Key="W" />
+        <KeyBinding Command="{Binding NextTurn}" Key="E" />
+
+    </Page.InputBindings>
+    <Viewbox Stretch="Uniform">
+
+        <Grid Width="525" Height="350" VerticalAlignment="Stretch">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height= "28" />
+            <RowDefinition Height= "23" />
+            <RowDefinition Height= "*" />
+            <RowDefinition Height= "26" />
+        </Grid.RowDefinitions>
+        
+        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,2">
+                <Button Name="Menu" Width="70" Background="{StaticResource TransparentBackground}" BorderThickness="0" Click="Button_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="Ressources/home.png" Width="20" Height="20"/>
+                        <TextBlock Text="Menu" VerticalAlignment="Center" />
+                    </StackPanel>
+                </Button>
+                <!--<TextBlock Width="120" Text="Tours restants :" Background="{StaticResource TransparentBackground}" VerticalAlignment="Center" Margin="140,0" Padding="5,0" /> -->
+                <StackPanel Orientation="Horizontal" Width="120" Background="{StaticResource TransparentBackground}" VerticalAlignment="Center" Margin="120,0" >
+                    <TextBlock Text="{Binding ToursRestants}" HorizontalAlignment="Center" Margin="22,0,0,0"/>
+                </StackPanel>
+                <Button Name="Save" Click="Button_Click" Width="70" Background="{StaticResource TransparentBackground}" BorderThickness="0">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Save" VerticalAlignment="Center" />
+                        <Image Source="Ressources/save.png" Width="20" Height="20"/>
+                    </StackPanel>
+                </Button>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Background="{StaticResource TransparentBackground}" HorizontalAlignment="Center" Margin="0,2" >
+            <TextBlock Name="score_p1" Text="{Binding PvP1}" Margin="10,0,0,0"/>
+            <TextBlock Name="pseudo_p1" Text="{Binding NameP1}" Margin="20,0,0,0"/>
+            <TextBlock Text="VS" HorizontalAlignment="Center" Margin="150,0" FontWeight="Bold" FontSize="14"/>
+            <TextBlock Name="pseudo_p2" Text="{Binding NameP2}" Margin="0,0,20,0"/>
+            <TextBlock Name="score_p2"  Text="{Binding PvP2}" Margin="0,0,10,0"/>
+        </StackPanel>
+
+        <Grid Background="Transparent" Grid.Row="2"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="160"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Vertical"  Background="{StaticResource TransparentBackground}" Margin="7,15,5,11"  >
+
+                    <StackPanel Orientation="Vertical"   DataContext="{Binding SelectedUnit}" Margin="10,15,10,6" >
+                    <Image Source="{Binding UnitSource}" Width="100" Height="100"/>
+                    <TextBlock Text="{Binding Type}" HorizontalAlignment="Center" />
+                    <TextBlock Text="{Binding PvRemaining}" HorizontalAlignment="Center" />
+                    <TextBlock Text="{Binding MovePoints}" HorizontalAlignment="Center" />
+                    <TextBlock Text="{Binding AttackPoints}" HorizontalAlignment="Center" />
+                    <TextBlock Text="{Binding DefensePoints}" HorizontalAlignment="Center" />
+                    </StackPanel>
+                <StackPanel Orientation="Vertical"   Margin="10,0"  >
+                    
+                    <TextBlock Text="{Binding CurrentPlayerName}" HorizontalAlignment="Center" FontWeight="Bold"  />
+                    <TextBlock Text="{Binding NbUnitsCurrentPlayer}" HorizontalAlignment="Center" />
+                </StackPanel>
+                </StackPanel>
+
+
+                <ListBox Grid.Column="1" Background="Transparent" ItemsSource="{Binding Tiles}" SelectedItem="{Binding SelectedTile, Mode=TwoWay}" HorizontalAlignment="Center" VerticalAlignment="Center" SnapsToDevicePixels="True">
+                    <!--Définition du conteneur de la listBox : une grille uniforme -->
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <UniformGrid Columns="{Binding Width}"/>
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                    <!--Définition du style de la listBox -->
+                    <ListBox.ItemContainerStyle>
+                        <Style TargetType="ListBoxItem">
+                            <Setter Property="Padding" Value="0"/>
+                        </Style>
+                    </ListBox.ItemContainerStyle>
+                    <!-- Chaque élément (Item) de la listBox (ItemsSource = liste des tuiles "Tiles") sera associé à une grille (1x1) qui pourra superposer 3 entités : Rectangle+Ellipse+Rectangle  -->
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <!--implictement = Datacontext = l'item-->
+                            <Grid>
+                                <Rectangle Opacity="0.7" Fill="{Binding Color}" StrokeThickness="0" Width="20" Height="20"/>
+                                <Image Source="{Binding RaceUnit}" Width="18" Height="18" Visibility="{Binding HasUnit, Converter={StaticResource bool2visibility}}"/>
+                                <Rectangle Stroke="Red" StrokeThickness="2" Width="20" Height="20" Visibility="{Binding IsSelected, Converter={StaticResource bool2visibility}}"/>
+                                <Rectangle Stroke="White" StrokeThickness="2" Width="20" Height="20" Visibility="{Binding IsUnitSelected, Converter={StaticResource bool2visibility}}"/>
+                                <Image Source="Ressources/star.png" Opacity="0.7" Width="20" Height="20" Visibility="{Binding IsTileSuggested, Converter={StaticResource bool2visibility}}"/>
+                            </Grid>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+
+
+            </Grid>
+
+        <Grid Grid.Row="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="4,2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+
+            </Grid.ColumnDefinitions>
+                <Button Visibility="{Binding ReplayVisibility, Converter={StaticResource bool2visibility}}" Name="Move" IsEnabled="{Binding MoveEnabled}" Command="{Binding Move}" Content="Move" Grid.Column="0" Background="{StaticResource TransparentBackground}"/>
+                <Button Visibility="{Binding ReplayVisibility, Converter={StaticResource bool2visibility}}" Name="Attack" IsEnabled="{Binding AttackEnabled}" Command="{Binding Attack}" Content="Attack" Grid.Column="1" Background="{StaticResource TransparentBackground}"/>
+            <Button Name="Suggest" Command="{Binding Suggest}" Content="{Binding ButtonSuggestName}" Grid.Column="2" Background="{StaticResource TransparentBackground}"/>
+                <Button Visibility="{Binding ReplayVisibility, Converter={StaticResource bool2visibility}}" Name="NextUnit" Command="{Binding NextUnit}" Content="Next Unit" Grid.Column="3" Background="{StaticResource TransparentBackground}"/>
+                <Button Visibility="{Binding ReplayVisibility, Converter={StaticResource bool2visibility}}" Name="NextTurn" Command="{Binding NextTurn}" Content="Next Turn" Grid.Column="4" Background="{StaticResource TransparentBackground}"/>
+        </Grid>
+    </Grid>
+  </Viewbox>
+</Page>
