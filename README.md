@@ -1,23 +1,23 @@
-# Projet INSAWorld
+# INSAWorld
 
-Ce projet est réalisé dans le cadre du module POO / MOO de 4ème année au département informatique de l'INSA Rennes.
+This project has been realized in the frame of the 4th year OOP module in the computer science department at INSA Rennes.
 
-La solution Visual Studio se décompose en 3 projets.
+The Visual Studio solution is divided in three parts.
 
 ## C++ Library
 
-Cette bibliothèque propose trois algorithmes :  
-- Un algorithme permettant de créer la carte, en respectant les contraintes imposées par le cahier des charges;  
-- Un algorithme permettant de placer les unités de chaque joueur de manière à ce qu'elles soient dans des quarts opposés de la carte;  
-- Un algorithme de suggestion de mouvement d'une unité au cours du jeu, celui ci compare parmi les cases accessibles celles rapportant le maximum de points de victoire.
+This library supplies three algorithms :
+- An algorithm allowing to generate a map while considering the constraints described in the specification
+- An algorithm allowing to arrange players units fairly
+- An algorithm generating unit move suggestions during the game, it suggests the best move, i.e. the move making the most of points
 
 ## C# Model Implementation
 
-Ce projet contient l'ensemble des classes permettant l'execution du jeu normalement et aussi de rejouer une partie sauvegardée.
+This part included the set of classes allowing to play a game and also these allowing to replay a saved game.
 
 ## C# Software Testing
 
-Ce projet contient l'ensemble des tests unitaires permettant de tester la bibliothèque C++ ainsi que le modèle en C#.
+This part included the set of unit tests allowing to test features provided by the C++ library and C# model.
 
 ## Screenshots
 
