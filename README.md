@@ -19,3 +19,7 @@ Ce projet contient l'ensemble des classes permettant l'execution du jeu normalem
 
 Ce projet contient l'ensemble des tests unitaires permettant de tester la bibliothèque C++ ainsi que le modèle en C#.
 
+## Screenshots
+
+![Image](./main-menu.png)
+![Image](./game.png)
